@@ -1,0 +1,4 @@
+GIT -> https://help.github.com/articles/good-resources-for-learning-git-and-github/
+Simple python tutorials -> https://www.tutorialspoint.com/python/
+Python official documentation -> https://docs.python.org/3/
+ 
