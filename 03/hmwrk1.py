@@ -10,4 +10,5 @@ with open(f, 'r') as content_file:
 lis.sort()
 lis.pop(0)
 dicto=Counter(lis)
-print(dicto)
+print (dicto.most_common())
+print (list(dicto))
