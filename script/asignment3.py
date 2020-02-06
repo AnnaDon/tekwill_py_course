@@ -1,33 +1,18 @@
-myBook = open('/home/adrian/QA/tekwill_py_course/03/The Hunger Games.txt')
+myBook = open('/home/gherman/qa/tekwill_py_course/03/The Hunger Games.txt')
 myBook.seek(0)
+
+#create paleindrom list
 listOfPaleindroms = list()
-
-def reverse(s):
-	return s[::-1]
-def isPalindrome(s): 
-    	# Calling reverse function 
-	rev = reverse(s) 
-  
-   	 # Checking if both string are equal or not 
-	if (s == rev and len(s) > 1):
-		return True
-	return False
-
-for i in myBook.read().translate({ord(c): " " for c in "!@#$%^\"&*()[]{};:,./<>?\|`~-=_+"}).split():
-	ans = isPalindrome(i)
-	len(i)
-	if ans == 1:
-		listOfPaleindroms.append(i) 
-list_set = set(listOfPaleindroms) 
-# convert the set to the list 
-unique_list = (list(list_set)) 
+for i in myBook.read().translate({ord(c): "" for c in "!@#$%^\"&*()[]{};:,./<>?\|`~-=_+"}).split():
+        if (i == i[::-1] and len(i)>1):
+            listOfPaleindroms.append(i) 
 
 #create dictionary
 dictionaryOfPaleindroms = {}
-for i in unique_list:
+for i in list(set(listOfPaleindroms)):
 	numOfRepetitions = listOfPaleindroms.count(i)
 	dictionaryOfPaleindroms[i] = numOfRepetitions
 
 print (dictionaryOfPaleindroms)
-	
-	
+
+dir(myBook)
