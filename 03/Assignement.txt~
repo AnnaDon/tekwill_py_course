@@ -1,0 +1,5 @@
+Task:
+
+Read the file "The Hunger Games.txt" identify all the words/numbers that are polindroms. 
+- Then make a dict that would have as keys the respective words and as values the numebr of times they have occurred in our file. 
+- Make a set with those words and print them in stdout
